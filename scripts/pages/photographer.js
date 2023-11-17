@@ -38,19 +38,24 @@ async function displayData(photographer, media) {
     // Disposition des données du photographe
     const photographerHeader = document.querySelector(".photograph-header");
     const photographerSection = document.querySelector(".photographer-media_section");
+    const photographerInfo = document.querySelector(".photographer-info");
     // const { name } = photographer[0];
     // console.log({name});
 
-    const photographerModel = photographerTemplate(photographer);
+    const photographerModel = photographerHeaderTemplate(photographer);
     const userCardDOM = photographerModel.getUserCardDOM();
     photographerHeader.appendChild(userCardDOM);
 
+    const photographerInfoModel = photographerInfoTemplate(photographer);
+    const userInfoDOM = photographerInfoModel.getUserInfoDOM();
+    photographerInfo.appendChild(userInfoDOM);
+
     // Disposition des données médias du photographe
-    media.forEach((picture) => {
-        const photographerModel = photographerMediaTemplate(photographer, picture);
+    media.forEach((data) => {
+        const photographerModel = photographerMediaTemplate(photographer, data);
         const userMediaDOM = photographerModel.getUserMediaDOM();
         photographerSection.appendChild(userMediaDOM);
-        console.log(picture);
+        // console.log(data);
     });
 }
 
