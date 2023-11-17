@@ -79,8 +79,8 @@
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
-    padding: 50px;
+    /* margin: 0 100px; */
+    padding: 50px 100px;
 }
 
 .photograph-header img {
@@ -133,13 +133,14 @@
     line-height: normal;
 }
 
-/* Media section */
+/* Photographer Media section */
 .photographer-media_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
     justify-content: space-between;
-    margin: 0 100px;
+    /* margin: 0 100px; */
+    margin: 0;
     margin-top: 100px;
 }
 
@@ -213,6 +214,19 @@
     width: 21px;
     height: 24px;
 }
+
+/* photographer-info */
+.photographer-info {
+    position: fixed;
+    width: 376px;
+    height: 89px;
+    bottom: 0;
+    right: 50px;
+    border-radius: 5px;
+    background: #DB8876;
+    z-index: 99999999999;
+}
+
 
 /* Contact Button */
 #contact_modal {
