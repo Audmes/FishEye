@@ -1,8 +1,14 @@
     // Page Index
     async function getPhotographers() {
+        // Récupère les datas des photographes
         const response = await fetch('data/photographers.json');
-        const photographers = await response.json();
-        return photographers;
+        if (response.ok) {
+            const photographers = await response.json();
+            // console.log(photographers);
+            return photographers;
+        }else {
+            console.log("HTTP-Error: " + response.status);
+        } 
     }
 
     async function displayData(photographers) {

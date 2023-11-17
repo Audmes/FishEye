@@ -6,9 +6,13 @@ photographerId = photographerId.slice(4);
 const getData = async () => {
     // Récupère les datas des photographes
     const response = await fetch('data/photographers.json');
-    const data = await response.json();
-    // console.log(data);
-    return data;
+    if (response.ok) { // if HTTP-status is 200-299
+        const data = await response.json();
+        // console.log(data);
+        return data;
+    }else {
+        console.log("HTTP-Error: " + response.status);
+    } 
 }
 
 const getPhotographerById = async (photographerId) => {
@@ -30,34 +34,30 @@ const getPhotographerMediaById = async (photographerId) => {
     );
 }
 
-async function displayDataPhotographer(photographer) {
+async function displayData(photographer, media) {
     // Disposition des données du photographe
+    const photographerHeader = document.querySelector(".photograph-header");
+    const photographerSection = document.querySelector(".photographer-media_section");
     // const { name } = photographer[0];
-    const photographersSection = document.querySelector(".photograph-header");
-
     // console.log({name});
 
     const photographerModel = photographerTemplate(photographer);
     const userCardDOM = photographerModel.getUserCardDOM();
-    photographersSection.appendChild(userCardDOM);
-}
+    photographerHeader.appendChild(userCardDOM);
 
-async function displayDataMedia(photographer, photographerMedia) {
-    // Disposition des données Media du photographe
-    const photographersSection = document.querySelector(".photographer-media_section");
-
-    photographerMedia.forEach((media) => {
-        const photographerModel = photographerMediaTemplate(photographer, media);
+    // Disposition des données médias du photographe
+    media.forEach((picture) => {
+        const photographerModel = photographerMediaTemplate(photographer, picture);
         const userMediaDOM = photographerModel.getUserMediaDOM();
-        photographersSection.appendChild(userMediaDOM);
+        photographerSection.appendChild(userMediaDOM);
+        console.log(picture);
     });
 }
 
 async function init(photographerId) {
     // Récupère les datas du photographe
     const photographer = await getPhotographerById(photographerId);
-    const photographerMedia = await getPhotographerMediaById(photographerId);
-    displayDataPhotographer(photographer[0]);
-    displayDataMedia(photographer[0], photographerMedia);
+    const media = await getPhotographerMediaById(photographerId);
+    displayData(photographer[0], media);
 }
 init(photographerId);
