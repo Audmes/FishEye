@@ -1,3 +1,7 @@
+/**
+* FishEye : Photographer
+**/
+
 /* Index Page */
 .photographer_section {
     display: grid;
@@ -69,6 +73,9 @@
     line-height: normal;
 }
 
+/* Photographer page*/
+
+/* Header */
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
@@ -126,7 +133,7 @@
     line-height: normal;
 }
 
-/* Photographer page*/
+/* Media section */
 .photographer-media_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -164,6 +171,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .photographer-media_section article h2 {
@@ -193,36 +201,20 @@
     line-height: normal;
 }
 
+.photographer-media_section article .desc .wrap-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.photographer-media_section article .desc .wrap-like img{
+    width: 21px;
+    height: 24px;
+}
+
 /* Contact Button */
 #contact_modal {
     display: none;
-}
-
-.contact_button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact_submit {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
 }

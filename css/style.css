@@ -1,8 +1,9 @@
 /**
-* FishEye
+* FishEye - Template
 **/
 @import url('resets.css');
 @import url('base.css');
 @import url('photographer.css');
+@import url('buttons.css');
 @import url('modal.css');
 @import url('responsive.css');
