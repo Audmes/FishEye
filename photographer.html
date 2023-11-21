@@ -4,22 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fisheye - photographe</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <!-- CSS -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page ">
-      <h1>Nos photographes</h1>
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page ">
+      </a>
     </header>
 
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      </div>
+      <section class="photographer-header"></section>
 
-      <div class="photographer-media_section"></div>
+      <section class="photographer-content"></section>
 
       <div class="photographer-info"></div>
     </main>
@@ -40,13 +44,11 @@
 			</div>
 		</div>
 
-    <footer>
+    <!-- <footer>
       <em>&copy; FishEye</em>
-    </footer>
+    </footer> -->
     
     <!-- JS Script -->
-    <script src="scripts/templates/photographer.js"></script>
-    <script src="scripts/pages/photographer.js"></script>
-    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/pages/photographer.js" type="module"></script>
   </body>
 </html>
