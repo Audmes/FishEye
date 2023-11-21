@@ -2,7 +2,7 @@
 * FishEye : Photographer Page
 **/
 
-/* Header */
+/* Photographer Header */
 .photographer-header {
     height: 300px;
     width: 100%;
@@ -34,105 +34,86 @@
     /* filter: grayscale(20%); */
 }
 
-/* .photograph-header article a {
-    text-decoration: none;
-} */
-
-/* Photographer Media section */
+/* Photographer Content : Medias */
 .photographer-content {
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 100px;
     /* margin: 0 100px; */
     margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
-    justify-content: space-between;
-}
-
-.photographer-content a {
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-}
-
-.photographer-content article {
-    width: 100%;
-    height: 100%;
-    justify-self: center;
+    padding: 0 100px;
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.photographer-content article img {
-    height: 300px;
-    width: 350px;
-    object-fit: cover;
-    object-position: center;
-    /* filter: grayscale(20%); */
+.gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px 60px;
 }
 
-.photographer-content article .desc {
-    width: 100%;
-    padding: 10px 0;
+.gallery_card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.animeCard{
+    animation: fade .2s ease-in-out;
+}
+
+.gallery_card a{
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery_card a figure{
+    height: 260px;
+    transition: all .2s ease-in-out;
+}
+
+.gallery_card a:hover figure{
+    transform: scale(1.05);
+}
+
+.gallery_card a:focus:not(:hover){
+    outline: 2px solid var(--color-secondary);
+}
+
+.gallery_thumbs {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    will-change: transform;
+}
+
+.gallery_card figcaption{
+    display:flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
-.photographer-content article h2 {
-    max-width: 292px;
-    color: #901C1C;
-    font-family: DM Sans;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap;
-    overflow: scroll;
-    text-overflow: clip;
-    text-overflow: ellipsis;
-    text-overflow: "…";
-    text-overflow: fade;
+.gallery_card figcaption h2{
+    font-weight: 100;
+    color: var(--color-primary);
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
 }
 
-.photographer-content article p {
-    color: #000;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.photographer-content article p {
-    color: #000;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.photographer-content article .desc .wrap-like {
+.gallery_card figcaption div{ 
+    align-self: flex-start;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 5px;
+    color: var(--color-primary);
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
 }
 
-.photographer-content article .desc .wrap-like img{
-    width: 21px;
-    height: 24px;
-}
-
-/* photographer-info */
+/* photographer-asidebar */
 .photographer-info {
     position: fixed;
     width: 376px;
