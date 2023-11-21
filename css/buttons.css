@@ -3,9 +3,9 @@
 **/
 /* Contact Button */
 .contact_button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     font-size: 20px;
     font-weight: bold;
     color: white;

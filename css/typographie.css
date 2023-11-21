@@ -1,0 +1,46 @@
+/**
+* FishEye - Typographie
+**/
+.photographer_name {
+    color: var(--color-tertiary);
+    text-align: center;
+    font-family: DM Sans;
+    /* font-size: 36px; */
+    font-size: clamp(2rem, 3vw, 2.25rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.photographer_tagline {
+    color: var(--color-dark);
+    text-align: center;
+    font-family: DM Sans;
+    /* font-size: 10px; */
+    font-size: clamp(0.625rem, 5vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.photographer_location {
+    color: var(--color-primary);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: clamp(0.813rem, 3vw, 1rem);
+    /* font-size: 13px; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.photographer_price {
+    color: var(--color-medium);
+    text-align: center;
+    font-family: DM Sans;
+    /* font-size: 9px; */
+    font-size: clamp(0.563rem, 3vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
