@@ -11,12 +11,12 @@ export default class PhotographerTemplate {
         const photographerProfile = document.querySelector('.photographer-header');
 
         const profile = `
-            <div class="photographer_profile__infos">
+            <div class="photographer-profile_infos">
                 <h1 class="photographer_name">${this.photographer.name}</h1>
                 <p class="photographer_location">${this.photographer.city}, ${this.photographer.country}</p>
                 <p class="photographer_tagline">${this.photographer.tagline}</p>    
             </div>
-            <button class="contact_button" type="button" aria-label="Open contact form">Contactez-moi</button>
+            <button class="btn contact_button" type="button" aria-label="Open contact form">Contactez-moi</button>
             <img class="photographer_portrait" src="assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}">
         `;
         photographerProfile.innerHTML = profile;

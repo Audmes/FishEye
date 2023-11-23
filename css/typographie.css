@@ -6,7 +6,7 @@
     text-align: center;
     font-family: "DM Sans";
     /* font-size: 36px; */
-    font-size: clamp(2rem, 3vw, 2.25rem);
+    font-size: clamp(2.5rem, 3.2vw, 3.2rem);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -17,7 +17,7 @@
     text-align: center;
     font-family: "DM Sans";
     /* font-size: 10px; */
-    font-size: clamp(0.625rem, 5vw, 1rem);
+    font-size: clamp(1.5rem, 1.8vw, 1.8rem);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -25,9 +25,8 @@
 
 .photographer_location {
     color: var(--color-primary);
-    text-align: center;
     font-family: "DM Sans";
-    font-size: clamp(0.813rem, 3vw, 1rem);
+    font-size: clamp(1.8rem, 2vw, 2rem);
     /* font-size: 13px; */
     font-style: normal;
     font-weight: 400;
