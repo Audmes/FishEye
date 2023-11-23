@@ -38,7 +38,7 @@
     text-align: center;
     font-family: "DM Sans";
     /* font-size: 9px; */
-    font-size: clamp(0.563rem, 3vw, 1rem);
+    font-size: clamp(1.5rem, 1.8vw, 1.8rem);
     font-style: normal;
     font-weight: 400;
     line-height: normal;

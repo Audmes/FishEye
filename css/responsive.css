@@ -6,6 +6,8 @@
 @media screen and (max-width: 63.99rem) {
     /* Base */
     header {
+        height: auto;
+        flex-direction: column;
         padding: 25px 40px; 
     }
     
@@ -18,7 +20,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 70px;
-        margin-top: 50px;
+        margin-top: 0;
+    }
+
+    /* Photographer Page */
+    .header-page {
+        height: 50px;
     }
 }
 
@@ -26,6 +33,8 @@
 @media screen and (max-width: 48rem) {
     /* Base */
     header {
+        height: 100px;
+        /* flex-direction: column; */
         padding: 25px 20px; 
     }
 
@@ -35,17 +44,16 @@
 
     /* Index Page */
     .photographer_section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 30px;
-        margin-top: 50px;
+        margin-top: 0;
     }
 }
 
-/* Screen between : 320px and 624px (720px = 45rem) */
+/* Screen max : 720px (720px = 45rem) */
 @media screen and (max-width: 45rem) {
     /* Base */
     header {
+        /* height: 50px; */
         padding: 25px 20px;
     }
     
@@ -58,7 +66,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
 
     /* Photographer page */
@@ -75,7 +83,7 @@
     /* Contact Button */
     .contact_button {
         position: absolute;
-        top: 10px;
+        top: 20px;
         right: 10px;
-}
+    }
 }
