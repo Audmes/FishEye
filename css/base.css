@@ -13,21 +13,20 @@ header {
     width: 100%;
     max-width: 1340px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background: var(--color-light);
-    background-color: aqua;
 }
 
 main {
     width: 100%;
     max-width: 1340px;
     margin: 0 auto;
-    padding: 20px;
-    /* padding: 0 100px; */
+    /* padding: 0; */
+    padding: 0;
     /* padding-bottom: 100px; */
     background: var(--color-light);
 }

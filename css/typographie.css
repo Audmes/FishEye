@@ -14,7 +14,7 @@
 
 .photographer_tagline {
     color: var(--color-dark);
-    text-align: center;
+    text-align: left;
     font-family: "DM Sans";
     /* font-size: 10px; */
     font-size: clamp(1.5rem, 1.8vw, 1.8rem);

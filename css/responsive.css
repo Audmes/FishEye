@@ -11,8 +11,8 @@
         padding: 25px 40px; 
     }
     
-    main {
-        padding: 40px;
+    .main-page {
+        padding: 20px 40px;
     }
 
     /* Index Page */
@@ -26,6 +26,7 @@
     /* Photographer Page */
     .header-page {
         height: 50px;
+        padding: 25px 40px;
     }
 }
 
@@ -38,7 +39,7 @@
         padding: 25px 20px; 
     }
 
-    main {
+    .main-page {
         padding: 20px;
     }
 
@@ -46,6 +47,12 @@
     .photographer_section {
         gap: 30px;
         margin-top: 0;
+    }
+
+    /* Photographer Page */
+    .header-page {
+        height: 50px;
+        padding: 25px 20px;
     }
 }
 
@@ -57,7 +64,7 @@
         padding: 25px 20px;
     }
     
-    main {
+    .main-page {
         padding: 10px;
     }
 
@@ -70,6 +77,18 @@
     }
 
     /* Photographer page */
+    .header-page {
+        height: 50px;
+        width: 100%;
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--color-light);
+    }
 
     /* Photographer Header */
     .photographer-header {
