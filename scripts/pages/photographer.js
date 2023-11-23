@@ -2,6 +2,7 @@ import Api from '../api/Api.js';
 import Photographer from '../models/Photographer.js';
 import PhotographerTemplate from "../templates/photographer.js";
 import MediasFactory from "../factories/MediasFactory.js";
+import { openCloseFilterMenu } from "../utils/filters.js";
 
 
 const photographersApi = new Api("./data/photographers.json");
@@ -34,6 +35,9 @@ const displayPhotographerPage = async () => {
 
     const mediasTemplate = new PhotographerTemplate(photographer, medias);
     mediasTemplate.createPhotographerMedias();
+
+    openCloseFilterMenu();
+    // displayMediaWithFilter(mediasTemplate)
 };
 
 displayPhotographerPage();

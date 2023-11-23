@@ -23,11 +23,21 @@ export default class PhotographerTemplate {
         return profile;
     };
 
+    createPhotographerFilters() {
+        const photographerFilters = document.querySelector(".photographer-filters");
+        console.log('je suis ici');
+        const filters =  `
+            <div class="filters">Hello</div>
+        `;
+
+        photographerFilters.innerHTML = filters;
+        return filters;
+    };
+
     createPhotographerMedias() {
-        const photographerContent = document.querySelector(".photographer-content");
+        const photographerContent = document.querySelector(".photographer-gallery");
 
         const content = `
-            <section class="gallery">
             ${this.medias.map(media => {
                 const mediaContent = media.image
                     ? ` <img class="gallery_thumbs" src="./assets/photographers/${this.photographer.name}/thumbs/${media.image}" alt="${media.alt}">`
@@ -51,7 +61,6 @@ export default class PhotographerTemplate {
                         </article>
                 `;
                 }).join("")}
-            </section >
         `;
         photographerContent.innerHTML = content;
         return content;
