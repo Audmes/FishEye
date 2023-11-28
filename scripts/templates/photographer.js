@@ -40,8 +40,8 @@ export default class PhotographerTemplate {
         const content = `
             ${this.medias.map(media => {
                 const mediaContent = media.image
-                    ? ` <img class="gallery_thumbs" src="./assets/photographers/${this.photographer.name}/thumbs/${media.image}" alt="${media.alt}">`
-                    : ` <video class="gallery_thumbs" aria-label="${media.alt}">
+                    ? ` <img class="gallery_thumbs" src="./assets/photographers/${this.photographer.name}/thumbs/${media.image}" alt="${media.title}">`
+                    : ` <video class="gallery_thumbs" aria-label="${media.title}">
                             <source src="./assets/photographers/${this.photographer.name}/thumbs/${media.video}" type="video/mp4">
                         </video>`;
                 return `
