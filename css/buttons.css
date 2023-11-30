@@ -53,3 +53,22 @@
 /* .active#heart:before,.active#heart:after{
 	background: red !important;
 } */
+
+/* Button Close */
+button.btn_close {
+    background-color: transparent;
+}
+
+.btn_close:hover::before{
+    color: var(--color-primary);
+}
+
+.btn_close::before{
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 900;
+    color: var(--color-light);
+    font-size: clamp(2rem, 3vw, 3rem);
+}

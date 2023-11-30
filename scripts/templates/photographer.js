@@ -9,6 +9,13 @@ export default class PhotographerTemplate {
 
     createPhotographerHeader() {
         const photographerProfile = document.querySelector('.photographer-header');
+        const formName = document.querySelector(".modal_form_name");
+        formName.textContent = this.photographer.name;
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.content = `Découvrez ${this.photographer.name}, photographe professionnel basé à ${this.photographer.city}, ${this.photographer.country} offrant ses services à partir de ${this.photographer.price} € / jour.`;
+        };
 
         const profile = `
             <div class="photographer-profile_infos">
@@ -19,6 +26,7 @@ export default class PhotographerTemplate {
             <button class="btn contact_button" type="button" aria-label="Open contact form">Contactez-moi</button>
             <img class="photographer_portrait" src="assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}">
         `;
+
         photographerProfile.innerHTML = profile;
         return profile;
     };
@@ -62,6 +70,7 @@ export default class PhotographerTemplate {
                 `;
                 }).join("")}
         `;
+        
         photographerContent.innerHTML = content;
         return content;
     };
