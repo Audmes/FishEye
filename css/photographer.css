@@ -75,11 +75,6 @@
     gap: 10px;
 }
 
-h2{
-    font-weight: 100;
-    font-size: clamp(1.6rem, 3vw, 1.8rem);
-}
-
 .filters_selection {
     position: relative;
     height: 100%;
