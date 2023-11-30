@@ -2,8 +2,9 @@ import Api from '../api/Api.js';
 import Photographer from '../models/Photographer.js';
 import PhotographerTemplate from "../templates/photographer.js";
 import MediasFactory from "../factories/MediasFactory.js";
+import { openCloseModal, validateForm } from "../utils/contactForm.js";
 import { openCloseFilterMenu } from "../utils/filters.js";
-
+import { displayLightbox } from "../utils/lightbox.js";
 
 const photographersApi = new Api("./data/photographers.json");
 
@@ -37,7 +38,10 @@ const displayPhotographerPage = async () => {
     mediasTemplate.createPhotographerMedias();
 
     openCloseFilterMenu();
+    openCloseModal();
+    validateForm();
     // displayMediaWithFilter(mediasTemplate)
+    displayLightbox(mediasTemplate);
 };
 
 displayPhotographerPage();

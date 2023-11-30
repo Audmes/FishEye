@@ -1,0 +1,121 @@
+/**
+* FishEye : Lightbox
+**/
+.lightbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* max-width: 1000px; */
+    max-width: calc(100% - 50px);
+    height: 90%;
+    /* max-height: 1000px; */
+    background-color: var(--color-light);
+    padding: 25px 60px 0;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-150px);
+    animation: fadeIn .3s ease-in-out forwards;
+}
+
+.lightbox_media {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox_media figcaption {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    color: var(--color-primary);
+}
+
+.lightbox_media img,
+.lightbox_media video {
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.lightbox_media video:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+/* Button Lightbox */
+.btn_close_lightbox {
+    z-index: 100;
+    position: absolute;
+    top: 25px;
+    right: 5px; 
+}
+
+.btn_close_lightbox::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--color-primary);
+}
+
+.btn_previous,
+.btn_next {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    padding: 5px;
+    background-color: transparent;
+}
+
+.btn_next {
+    right: 10px;
+}
+
+.btn_previous {
+    left: 10px;
+}
+
+.btn_next::before,
+.btn_previous::before {
+    font-family:  "Font Awesome 5 Free";
+    font-weight: 900;   
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--color-primary);
+}
+
+.btn_next::before {
+    content: "\f054";
+}
+
+.btn_previous::before {
+    content: "\f053";
+}
+
+.btn_previous:focus-visible:not(:hover),
+.btn_next:focus-visible:not(:hover) {
+    outline: 2px solid var(--color-primary);
+}
+
+.btn_previous:hover::before,   
+.btn_next:hover::before,
+.btn_close_lightbox:hover::before {
+    color: var(--color-secondary);
+}
+
+.invalid {
+    outline: 2px solid var(--color-primary);
+}
+
+.valid {
+    outline: 2px solid green;
+}
+
+.btn_next.active::before,
+.btn_previous.active::before,
+.btn_close_lightbox.active::before {
+    color: var(--color-secondary);
+}
