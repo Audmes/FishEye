@@ -31,12 +31,12 @@
           <h2>Trier par</h2>
           <div class="filters_selection" >
               <div class="dropdown">
-                  <button class="btn_drop" type="button" role=listbox aria-haspopup="listbox" aria-expanded="false" aria-controls="filter options" aria-label="Sort by">
+                  <button class="btn_drop" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="filter options" aria-label="Sort by">
                       <span id="current_filter">Titre</span>
                       <span class="arrow-up" aria-hidden="true"><img src="assets/icons/arrow.svg" alt="Flèche"></span>
                   </button>
 
-                  <ul class="dropdown_content" aria-hidden="true">
+                  <ul class="dropdown_content" role="listbox" aria-hidden="true">
                       <li role="option">
                           <button type="button" tabindex="-1" aria-label="Trié par titre">Titre</button>
                       </li>
@@ -110,11 +110,11 @@
 
     <!-- Lightbox -->
     <div class="lightbox_wrapper wrapper" aria-modal="true" role="dialog">
-      <div class="lightbox" aria-label="lightbox">
+      <div class="lightbox" aria-label="Media closeup view">
           <button class="btn_close_lightbox btn_close" aria-label="Close dialog"></button>
           <button class="btn_next" aria-label="Next media"></button>
           <button class="btn_previous" aria-label="Previous media"></button>
-          <figure class="lightbox_media" role="figure" aria-label="Current Media"></figure>
+          <figure class="lightbox_media" role="media" aria-label="Current Media"></figure>
       </div> 
     </div>
 
