@@ -24,7 +24,7 @@
     </header>
 
     <main id="main" class="main-page">
-      <section class="photographer-header"></section>
+      <div class="photographer-header"></div>
 
       <section class="photographer-content">
         <div class="photographer-filters">
@@ -85,17 +85,17 @@
           <form novalidate>
               <div class="form_content">
                   <label id="firstname-label" for="firstname">Prénom <span aria-hidden="true">*</span></label>
-                  <input class="formField" aria-labelledby="firstname-label" type="text" id="firstname" name="firstname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required/>
+                  <input class="formField" aria-labelledby="firstname-label" type="text" id="firstname" name="firstname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required>
                   <span></span>
               </div>
               <div class="form_content">
                   <label id="lastname-label" for="lastname">Nom <span aria-hidden="true">*</span></label>
-                  <input class="formField" aria-labelledby="lastname-label" type="text" id="lastname" name="lastname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required/>
+                  <input class="formField" aria-labelledby="lastname-label" type="text" id="lastname" name="lastname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required>
                   <span></span>
               </div>
               <div class="form_content">
                   <label id="email-label" for="email">Email <span aria-hidden="true">*</span></label>
-                  <input class="formField" aria-labelledby="email-label" type="email" id="email" name="email" maxlength="100" autocomplete="on" data-error="Veuillez renseigner une adresse mail valide." required/>
+                  <input class="formField" aria-labelledby="email-label" type="email" id="email" name="email" maxlength="100" autocomplete="on" data-error="Veuillez renseigner une adresse mail valide." required>
                   <span></span>
               </div>
               <div class="form_content">
@@ -110,11 +110,11 @@
 
     <!-- Lightbox -->
     <div class="lightbox_wrapper wrapper" aria-modal="true" role="dialog">
-      <div class="lightbox" aria-label="Media closeup view">
+      <div class="lightbox" aria-label="View media">
           <button class="btn_close_lightbox btn_close" aria-label="Close dialog"></button>
           <button class="btn_next" aria-label="Next media"></button>
           <button class="btn_previous" aria-label="Previous media"></button>
-          <figure class="lightbox_media" role="figure" aria-label="Current Media"></figure>
+          <figure class="lightbox_media" aria-label="Current Media"></figure>
       </div> 
     </div>
 
