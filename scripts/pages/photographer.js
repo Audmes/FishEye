@@ -40,6 +40,9 @@ const displayPhotographerPage = async () => {
     const mediasTemplate = new PhotographerTemplate(photographer, medias);
     mediasTemplate.createPhotographerMedias();
 
+    const lightboxTemplate = new PhotographerTemplate();
+    lightboxTemplate.createPhotographerLightbox();
+
     openCloseFilterMenu();
     openCloseModal();
     validateForm();

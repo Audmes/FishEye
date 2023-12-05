@@ -33,7 +33,7 @@ export default class PhotographerTemplate {
 
     createPhotographerFilters() {
         const photographerFilters = document.querySelector(".photographer-filters");
-        
+
         const filters =  `
             <h2>Trier par</h2>
             <div class="filters_selection" >
@@ -93,5 +93,21 @@ export default class PhotographerTemplate {
         
         photographerContent.innerHTML = content;
         return content;
+    };
+
+    createPhotographerLightbox() {
+        const photographerLightbox = document.querySelector(".lightbox_wrapper");
+
+        const lightbox = `
+            <div class="lightbox">
+                <button class="btn_close_lightbox btn_close" aria-label="Close dialog"></button>
+                <button class="btn_next" aria-label="Next media"></button>
+                <button class="btn_previous" aria-label="Previous media"></button>
+                <figure class="lightbox_media" aria-label="Current Media"></figure>
+            </div> 
+        `;
+
+        photographerLightbox.innerHTML = lightbox;
+        return lightbox;
     };
 };
