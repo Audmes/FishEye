@@ -3,7 +3,7 @@ import Photographer from '../models/Photographer.js';
 import PhotographerTemplate from "../templates/photographer.js";
 import MediasFactory from "../factories/MediasFactory.js";
 import { openCloseModal, validateForm } from "../utils/contactForm.js";
-import { openCloseFilterMenu } from "../utils/filters.js";
+import { openCloseFilterMenu, displayMediaWithFilter } from "../utils/filters.js";
 import { displayLightbox } from "../utils/lightbox.js";
 
 const photographersApi = new Api("./data/photographers.json");
@@ -34,13 +34,16 @@ const displayPhotographerPage = async () => {
     const headerTemplate = new PhotographerTemplate(photographer);
     headerTemplate.createPhotographerHeader();
 
+    const filtersTemplate = new PhotographerTemplate();
+    filtersTemplate.createPhotographerFilters();
+
     const mediasTemplate = new PhotographerTemplate(photographer, medias);
     mediasTemplate.createPhotographerMedias();
 
     openCloseFilterMenu();
     openCloseModal();
     validateForm();
-    // displayMediaWithFilter(mediasTemplate)
+    displayMediaWithFilter(mediasTemplate);
     displayLightbox(mediasTemplate);
 };
 

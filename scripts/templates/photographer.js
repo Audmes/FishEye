@@ -33,9 +33,29 @@ export default class PhotographerTemplate {
 
     createPhotographerFilters() {
         const photographerFilters = document.querySelector(".photographer-filters");
-        console.log('je suis ici');
+        
         const filters =  `
-            <div class="filters">Hello</div>
+            <h2>Trier par</h2>
+            <div class="filters_selection" >
+                <div class="dropdown">
+                    <button class="btn_drop" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="filter options" aria-label="Sort by">
+                        <span id="current_filter">Titre</span>
+                        <span class="arrow-up" aria-hidden="true"><img src="assets/icons/arrow.svg" alt="Flèche"></span>
+                    </button>
+
+                    <ul class="dropdown_content" role="listbox" aria-hidden="true">
+                        <li role="option">
+                            <button type="button" tabindex="-1" aria-label="Trié par titre">Titre</button>
+                        </li>
+                        <li role="option">
+                            <button type="button" tabindex="-1" aria-label="Trié par popularité">Popularité</button>
+                        </li>
+                        <li role="option">
+                            <button type="button" tabindex="-1" aria-label="Trié par date">Date</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         `;
 
         photographerFilters.innerHTML = filters;
