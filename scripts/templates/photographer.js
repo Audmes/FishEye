@@ -66,13 +66,14 @@ export default class PhotographerTemplate {
         const photographerContent = document.querySelector(".photographer-gallery");
 
         const content = `
-            ${this.medias.map(media => {
-                const mediaContent = media.image
-                    ? ` <img class="gallery_thumbs" src="./assets/photographers/${this.photographer.name}/thumbs/${media.image}" alt="${media.title}">`
-                    : ` <video class="gallery_thumbs" aria-label="${media.title}">
-                            <source src="./assets/photographers/${this.photographer.name}/thumbs/${media.video}" type="video/mp4">
-                        </video>`;
-                return `
+            <div class="gallery">
+                ${this.medias.map(media => {
+                    const mediaContent = media.image
+                        ? ` <img class="gallery_thumbs" src="./assets/photographers/${this.photographer.name}/thumbs/${media.image}" alt="${media.title}">`
+                        : ` <video class="gallery_thumbs" aria-label="${media.title}">
+                                <source src="./assets/photographers/${this.photographer.name}/thumbs/${media.video}" type="video/mp4">
+                            </video>`;
+                    return `
                         <article class="gallery_card">                           
                             <a href="#" data-media=${media.id} role="link" aria-label="View media large">
                                 <figure>${mediaContent}</figure>
@@ -89,6 +90,14 @@ export default class PhotographerTemplate {
                         </article>
                 `;
                 }).join("")}
+            </div>
+            <aside>
+                <p class="photographer_Likes">
+                    <span class="photographer_likes_count"></span>
+                    <span class="fas fa-heart" aria-hidden="true"></span>
+                </p>
+                <span>${this.photographer.price}€ / jour</span>
+            </aside>
         `;
         
         photographerContent.innerHTML = content;

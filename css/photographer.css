@@ -147,7 +147,7 @@
 }
 
 /* Photographer Gallery */
-.photographer-gallery {
+.gallery {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -211,18 +211,6 @@
     gap: 5px;
     color: var(--color-primary);
     font-size: clamp(1.8rem, 2vw, 2.2rem);
-}
-
-/* photographer-asidebar */
-.photographer-info {
-    position: fixed;
-    width: 376px;
-    height: 89px;
-    bottom: 0;
-    right: 50px;
-    border-radius: 5px;
-    background: #DB8876;
-    z-index: 99999999999;
 }
 
 /* Contact Modal */
