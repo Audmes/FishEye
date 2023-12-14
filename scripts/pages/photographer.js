@@ -5,6 +5,7 @@ import MediasFactory from "../factories/MediasFactory.js";
 import { openCloseModal, validateForm } from "../utils/contactForm.js";
 import { openCloseFilterMenu, displayMediaWithFilter } from "../utils/filters.js";
 import { displayLightbox } from "../utils/lightbox.js";
+import { displayTotalLikes } from "../utils/likes.js";
 
 const photographersApi = new Api("./data/photographers.json");
 
@@ -48,6 +49,7 @@ const displayPhotographerPage = async () => {
     validateForm();
     displayMediaWithFilter(mediasTemplate);
     displayLightbox(mediasTemplate);
+    displayTotalLikes();
 };
 
 displayPhotographerPage();

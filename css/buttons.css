@@ -15,11 +15,7 @@
 
 /* Contact Button */
 .contact_button {
-    /* position: absolute; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
     background-color: #901C1C;
-    
 }
 
 .contact_submit {
@@ -35,26 +31,7 @@
     cursor: pointer;
 }
 
-/* Heart Button */
-.button-heart {
-    width: 21px;
-    height: 24px;
-
-    /* position: fixed; */
-	/* border-radius: 5px;
-	background: none;
-	cursor: pointer;
-	transition: background 0.5s ease; */
-}
-
-/* .button:hover{
-
-} */
-/* .active#heart:before,.active#heart:after{
-	background: red !important;
-} */
-
-/* Button Close */
+/* Close Button */
 button.btn_close {
     background-color: transparent;
 }
@@ -71,4 +48,20 @@ button.btn_close {
     font-weight: 900;
     color: var(--color-light);
     font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* Like Button */
+.btn_like{
+    border-radius: 5px;
+    padding: 0 1px;
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+    color: var(--color-secondary);
+}
+
+.btn_like:focus-visible:not(:hover){
+    outline: 2px solid var(--color-secondary);
+}
+
+.liked {
+    color: var(--color-primary);
 }
