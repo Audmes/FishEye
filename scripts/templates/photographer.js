@@ -40,7 +40,7 @@ export default class PhotographerTemplate {
                 <div class="dropdown">
                     <button class="btn_drop" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="filter options" aria-label="Sort by">
                         <span id="current_filter">Titre</span>
-                        <span class="arrow-up" aria-hidden="true"><img src="assets/icons/arrow.svg" alt="Flèche"></span>
+                        <span class="fa-solid fa-chevron-up arrow-up" aria-hidden="true"></span>
                     </button>
 
                     <ul class="dropdown_content" role="listbox" aria-hidden="true">
