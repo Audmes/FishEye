@@ -1,4 +1,4 @@
-// import { displayTotalLikes } from "../utils/likes.js";
+import { displayTotalLikes } from "../utils/likes.js";
 import { displayLightbox } from "../utils/lightbox.js";
 
 export const openCloseFilterMenu = () => {
@@ -56,7 +56,7 @@ export const displayMediaWithFilter = mediasTemplate => {
         mediasTemplate.createPhotographerMedias();
         const mediasfiltered = mediasTemplate;
         displayLightbox(mediasfiltered);
-        // displayTotalLikes();
+        displayTotalLikes();
  
         const mediaElements = document.querySelectorAll('.gallery_card');
         mediaElements.forEach((media, index) => {

@@ -856,6 +856,12 @@ button.btn_close {
     top: 10px;
     right: 10px;
   }
+  .lightbox_media {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
   .lightbox_media figcaption {
     height: 30px;
   }
