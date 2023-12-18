@@ -860,7 +860,7 @@ button.btn_close {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .lightbox_media figcaption {
     height: 30px;
