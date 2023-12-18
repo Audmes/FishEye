@@ -104,6 +104,7 @@ aside {
   bottom: 0;
   left: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   height: 50px;
