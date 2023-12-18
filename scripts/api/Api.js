@@ -15,4 +15,4 @@ export default class Api {
             throw new Error(err);
         }
     }
-};
+}

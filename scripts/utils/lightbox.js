@@ -72,7 +72,7 @@ export const displayLightbox = medias => {
             case 'ArrowRight':
                 nextMedia();
                 break;
-        };
+        }
     });
 
     btnPrevious.addEventListener('click', () => previousMedia());

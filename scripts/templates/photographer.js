@@ -5,7 +5,7 @@ export default class PhotographerTemplate {
     constructor(photographer, medias) {
         this.photographer = photographer;
         this.medias = medias;
-    };
+    }
 
     createPhotographerHeader() {
         const photographerProfile = document.querySelector('.photographer-header');
@@ -15,7 +15,7 @@ export default class PhotographerTemplate {
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.content = `Découvrez ${this.photographer.name}, photographe professionnel basé à ${this.photographer.city}, ${this.photographer.country} offrant ses services à partir de ${this.photographer.price} € / jour.`;
-        };
+        }
 
         const profile = `
             <div class="photographer-profile_infos">
@@ -29,7 +29,7 @@ export default class PhotographerTemplate {
 
         photographerProfile.innerHTML = profile;
         return profile;
-    };
+    }
 
     createPhotographerFilters() {
         const photographerFilters = document.querySelector(".photographer-filters");
@@ -60,7 +60,7 @@ export default class PhotographerTemplate {
 
         photographerFilters.innerHTML = filters;
         return filters;
-    };
+    }
 
     createPhotographerMedias() {
         const photographerContent = document.querySelector(".photographer-gallery");
@@ -102,7 +102,7 @@ export default class PhotographerTemplate {
         
         photographerContent.innerHTML = content;
         return content;
-    };
+    }
 
     createPhotographerLightbox() {
         const photographerLightbox = document.querySelector(".lightbox_wrapper");
@@ -118,5 +118,5 @@ export default class PhotographerTemplate {
 
         photographerLightbox.innerHTML = lightbox;
         return lightbox;
-    };
-};
+    }
+}

@@ -8,4 +8,4 @@ export default class Media {
         this.price = data.price;
         // this.alt = data.alt;
     }
-};
+}
