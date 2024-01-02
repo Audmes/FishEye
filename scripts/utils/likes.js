@@ -1,10 +1,12 @@
 import { getPhotographerById } from "../pages/photographer.js";
 
+// Affichage du total de Likes
 export const displayTotalLikes = async () => {
     const { medias } = await getPhotographerById();
     const allBtnLike = document.querySelectorAll(".btn_like");
     const likesElement = document.querySelector(".photographer_likes_count");
 
+    // Mis à jour du total de likes
     const updateTotalLikes = () => {
         const totalLikes = medias.reduce((acc, media) => acc + media.likes, 0);
         likesElement.textContent = `${totalLikes}`;
@@ -12,6 +14,7 @@ export const displayTotalLikes = async () => {
 
     updateTotalLikes();
 
+    // Gestion du bouton like
     allBtnLike.forEach(btn => {
         btn.addEventListener("click", () => {
             const media = medias.find(media => media.id == btn.dataset.id);

@@ -1,3 +1,4 @@
+// Affichage de la Lightbox
 export const displayLightbox = medias => {
     const lightboxWrapper = document.querySelector('.lightbox_wrapper');
     const btnClose = document.querySelector('.btn_close_lightbox');

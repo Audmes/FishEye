@@ -17,10 +17,12 @@ const photographerId = parseInt(params.get("id")); // le nombre correspondant à
 export const getPhotographerById = async () => {
     const { photographers, media } = await photographersApi.get();
 
+    // Les Informations du photographe
     const photographer = photographers
         .map(photographer => new Photographer(photographer))
         .find(photographer => photographer.id == photographerId);
     
+    // Les médias du Photographe
     const medias = media
         .map(media => new MediasFactory(media))
         .filter(media => media.photographerId == photographerId);
@@ -32,15 +34,19 @@ export const getPhotographerById = async () => {
 const displayPhotographerPage = async () => {
     const { photographer, medias } = await getPhotographerById();
 
+    // Affichage du Header
     const headerTemplate = new PhotographerTemplate(photographer);
     headerTemplate.createPhotographerHeader();
 
+    //Affichage du Filtre
     const filtersTemplate = new PhotographerTemplate();
     filtersTemplate.createPhotographerFilters();
 
+    // Affichage des Médias
     const mediasTemplate = new PhotographerTemplate(photographer, medias);
     mediasTemplate.createPhotographerMedias();
 
+    // Affichage de la Lightbox
     const lightboxTemplate = new PhotographerTemplate();
     lightboxTemplate.createPhotographerLightbox();
 

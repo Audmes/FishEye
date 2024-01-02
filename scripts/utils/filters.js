@@ -1,6 +1,7 @@
 import { displayTotalLikes } from "../utils/likes.js";
 import { displayLightbox } from "../utils/lightbox.js";
 
+// Ouverture et Fermeture du Menu Filtre
 export const openCloseFilterMenu = () => {
     const filterMenu = document.querySelector(".dropdown_content");
     const filterMenuButton = document.querySelector(".btn_drop");
@@ -20,9 +21,10 @@ export const openCloseFilterMenu = () => {
     });
 };
 
+// Affichage des Médias avec le filtre
 export const displayMediaWithFilter = mediasTemplate => {
     const currentFilter = document.querySelector('#current_filter');
-    const allFilters = Array.from(document.querySelectorAll('.dropdown_content li button'))
+    const allFilters = Array.from(document.querySelectorAll('.dropdown_content li button'));
 
     let filterAlreadySelected = allFilters.find(filter => filter.textContent == currentFilter.textContent);
     filterAlreadySelected.style.display = 'none';
@@ -37,9 +39,10 @@ export const displayMediaWithFilter = mediasTemplate => {
             filterAlreadySelected.style.display = 'none';
 
             sortByFilter(filter.textContent);
-        })
+        });
     });
 
+    // Tri par filtre
     const sortByFilter = filterValue => {
         switch (filterValue) {
             case 'Titre':
@@ -53,11 +56,13 @@ export const displayMediaWithFilter = mediasTemplate => {
                 break;
         }
         
+        // Affichage des médias filtrés
         mediasTemplate.createPhotographerMedias();
         const mediasfiltered = mediasTemplate;
         displayLightbox(mediasfiltered);
         displayTotalLikes();
- 
+
+        // Avec une animation sur les images 
         const mediaElements = document.querySelectorAll('.gallery_card');
         mediaElements.forEach((media, index) => {
             setTimeout(() => {

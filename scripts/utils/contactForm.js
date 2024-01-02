@@ -1,14 +1,4 @@
-// export function displayModal() {
-//     const modal = document.getElementById("contact_modal");
-// 	modal.style.display = "block";
-// }
-
-// export function closeModal() {
-//     const modal = document.getElementById("contact_modal");
-//     modal.style.display = "none";
-// }
-
-// Open / Close Modal
+// Ouverture et Fermeture de la Modale
 export const openCloseModal = () => {
     const contactBtn = document.querySelector(".contact_button");
     const contactModal = document.getElementById("contact_modal");
@@ -22,7 +12,7 @@ export const openCloseModal = () => {
     closeModal.addEventListener("click", () => contactModal.style.display = "none");
 };
 
-// Validation Form
+// Validation du Formulaire
 export const validateForm = () => {
     const form = document.querySelector('.modal_form form');
     const firstName = document.querySelector("#firstname");
@@ -31,7 +21,7 @@ export const validateForm = () => {
     const message = document.querySelector("#message");
 
     form.addEventListener('input', () => displayCustomMessage());
-
+    
     form.addEventListener('submit', e => {
         e.preventDefault();
 
@@ -43,12 +33,14 @@ export const validateForm = () => {
                 email: email.value,
                 message: message.value,
             };
-            console.log(JSON.stringify(formDatas));
+            // Affichage dans la console
+            console.log(JSON.stringify(formDatas)); // La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON.
             document.querySelectorAll('.formField').forEach(input => input.classList.remove('valid'));
-            form.reset();
-        };
+            form.reset(); // On réinitialise le formulaire
+        }
     });
 
+    // Vérification des champs
     const checkInputValidity = (input, regex) => {
         const errorMessage = input.dataset.error;
         const messageProvider = input.nextElementSibling;
@@ -60,7 +52,7 @@ export const validateForm = () => {
             input.removeAttribute("aria-invalid");
         } else {
             messageProvider.innerHTML = errorMessage;
-            messageProvider.setAttribute("role", "alert")
+            messageProvider.setAttribute("role", "alert");
             input.setAttribute("aria-invalid", "true");
         }
 
@@ -68,9 +60,11 @@ export const validateForm = () => {
         input.classList.toggle('valid', isValid);
     };
 
+    // Affichage des messages
     const displayCustomMessage = () => {
         const regexName = /^([A-Za-z|\s]{3,15})?([-]{0,1})?([A-Za-z|\s]{3,15})$/;
-        const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        // const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        const regexEmail = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
         const regexMessage = /^[A-Za-z0-9|\s]{20,200}$/;
 
         checkInputValidity(firstName, regexName);

@@ -7,6 +7,7 @@ export default class PhotographerTemplate {
         this.medias = medias;
     }
 
+    // Creation du Header du Photographe
     createPhotographerHeader() {
         const photographerProfile = document.querySelector('.photographer-header');
         const formName = document.querySelector(".modal_form_name");
@@ -31,6 +32,7 @@ export default class PhotographerTemplate {
         return profile;
     }
 
+    // Creation du Menu Filtre du Photographe
     createPhotographerFilters() {
         const photographerFilters = document.querySelector(".photographer-filters");
 
@@ -62,6 +64,7 @@ export default class PhotographerTemplate {
         return filters;
     }
 
+    // Creation des Médias du Photographe
     createPhotographerMedias() {
         const photographerContent = document.querySelector(".photographer-gallery");
 
@@ -104,6 +107,7 @@ export default class PhotographerTemplate {
         return content;
     }
 
+    //Creation de la Lightbox du Photographe
     createPhotographerLightbox() {
         const photographerLightbox = document.querySelector(".lightbox_wrapper");
 
